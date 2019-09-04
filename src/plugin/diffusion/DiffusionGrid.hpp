@@ -346,14 +346,18 @@ namespace Diffusion {
                 news.push_back(INFINITY);
             }
             for (unsigned i = 0; i < molecules.size(); ++i) { //for each molecule
-                double t = 0; //elapsed time
-                double dt = getDt(molecules[i].diffusion); //Diffusion dt
-                while (abs(lasts[i] - news[i]) / grid.size() >= accuracy && t < w->dt) {
-                    lasts[i] = news[i];
-                    nextStep(i);
-                    news[i] = computeStep(i);
-                    t += dt;
-                }
+                if (i==2) { // a enlever pour faire diffuser les 3 molecules
+                    double t = 0; //elapsed time
+                    double dt = getDt(molecules[i].diffusion); //Diffusion dt
+                    while (abs(lasts[i] - news[i]) / grid.size() >= accuracy && t < w->dt) {
+                        lasts[i] = news[i];
+                        nextStep(i);
+                        news[i] = computeStep(i);
+                        t += dt;
+                    }
+                } 
+                
+
             }
         }
 

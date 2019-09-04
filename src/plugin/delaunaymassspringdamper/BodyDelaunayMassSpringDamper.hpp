@@ -44,14 +44,14 @@ namespace DelaunayMassSpringDamper {
             std::mt19937 gen(rd());
             std::lognormal_distribution<> d(0,1);
             float variation = d(gen);
-            while(variation>5.0){
-                // std::random_device rd;
-                // std::mt19937 gen(rd());
-                // std::lognormal_distribution<> d(0,2);
-                variation = d(gen);
+            // radius = 35 + variation;
+            if (variation <=5){
+                radius = 35+ variation;
             }
-            this->radius = 35.0+ variation;  
-            //std::cerr<<radius << std::endl;
+            else
+            {
+                radius = 40;
+            }
             //radius = 40; //40 µm radius
             density = 0.001; //in ng/µm^3 (density of water ~ 1000 kg/m^3)
             adhesion = 0.75;
@@ -59,7 +59,6 @@ namespace DelaunayMassSpringDamper {
             this->setPosition(pos + MecaCell::Vec::randomUnit() * getBoundingBoxRadius() * 2.0 * adhesion);
         }
 
-   
         /*!
          * \brief radius getter
          * @return radius

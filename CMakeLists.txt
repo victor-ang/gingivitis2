@@ -56,7 +56,7 @@ if(CMAKE_THREAD_LIBS_INIT)
 target_link_libraries(console "${CMAKE_THREAD_LIBS_INIT}")
 endif()
 
-# viewer
+#[[viewer
 set(VIEWER_NAME viewer) # nom de l'executable
 find_package(Qt5 COMPONENTS Core Quick REQUIRED) # find Qt
 set(MECACELL_VIEWER_DIR ${MECACELL_DIR}/mecacellviewer)
@@ -75,4 +75,4 @@ endif()
 if(CMAKE_THREAD_LIBS_INIT)
 target_link_libraries(${VIEWER_NAME} "${CMAKE_THREAD_LIBS_INIT}")
 endif()
-
+#]]
