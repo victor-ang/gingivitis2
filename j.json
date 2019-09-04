@@ -1,0 +1,84 @@
+{
+
+  "Immune": {
+    "Resident": {
+      "speed": 1.0,
+      "divisionProb": 0.01,
+      "deathProb": 0.00001,
+      "health": 1.0,
+      "killing": 0.01,
+      "inflaProd": 0.5,
+      "resoProd": 0.5,
+      "inflaDegrad": 0.25,
+      "resoDegrad": 0.10,
+      "inflaHealthImpact": 0.001,
+      "extinctionProb": 0.0,
+      "red": 1.0,
+      "green": 0.5,
+      "blue": 0.5,
+      "shiftStep": 0
+    },
+    "Circulatory": {
+      "speed": 2.0,
+      "divisionProb": 0.0,
+      "deathProb": 0.0,
+      "health": 1.0,
+      "killing": 0.01,
+      "inflaProd": 0.6,
+      "resoProd": 0.5,
+      "inflaDegrad": 0.25,
+      "resoDegrad": 0.10,
+      "inflaHealthImpact": 0.001,
+      "extinctionProb": 0.005,
+      "red": 1.0,
+      "green": 1.0,
+      "blue": 0.0,
+      "shiftStep": -5
+    }
+  },
+
+  "Stroma": {
+    "None": {
+      "speed": 0.01,
+      "divisionProb": 0.001,
+      "deathProb": 0.0000001,
+      "health": 1.0,
+      "killing": 0.0001,
+      "inflaProd": 0.25,
+      "resoProd": 0.0,
+      "inflaDegrad": 0.25,
+      "resoDegrad": 0.05,
+      "inflaHealthImpact": 0.001,
+      "extinctionProb": 0.0,
+      "red": 0.5,
+      "green": 0.5,
+      "blue": 1.0,
+      "shiftStep": 0
+    }
+  },
+
+  "ImmuneMaker": {
+    "None": {
+      "speed": 0.0,
+      "divisionProb": 100.0,
+      "deathProb": 0.0,
+      "health": 100000.0,
+      "killing": 0.0,
+      "inflaProd": 0.0,
+      "resoProd": 0.0,
+      "inflaDegrad": 0.0,
+      "resoDegrad": 0.0,
+      "inflaHealthImpact": 0.0,
+      "extinctionProb": 0.0,
+      "red": 1.0,
+      "green": 0.5,
+      "blue": 0.0,
+      "shiftStep": 0
+    }
+  },
+
+  "mean": 5,
+  "variance": 1,
+  "nbCells": 2850,
+  "ratioImmuneStromal": 0.25
+}
